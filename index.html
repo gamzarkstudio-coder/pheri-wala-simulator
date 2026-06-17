@@ -1,57 +1,161 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
+    <meta charset="UTF-8">
+
+    <title>Gamzark Studio | Pheri Wala Simulator</title>
+
     <style>
-        /* Modern Dark Theme */
-        body { background: #0d1117; color: #fff; font-family: 'Segoe UI', sans-serif; scroll-behavior: smooth; }
+
+        /* Body with background from Game District type */
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0d1117; color: #fff; text-align: center; margin: 0; padding: 20px; }
+
         
-        /* Navigation with Animation */
-        nav { background: #161b22; padding: 20px 10%; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 1000; }
-        .nav-links a { color: #fff; text-decoration: none; margin-left: 30px; transition: 0.3s; }
-        .nav-links a:hover { color: #ff9800; }
 
-        /* Feature Section */
-        .game-section { padding: 80px 10%; text-align: center; }
-        .card-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
-        .card { background: #21262d; padding: 20px; border-radius: 15px; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-10px); border: 1px solid #ff9800; }
+        /* Studio Logo Container (Centered at the top) */
 
-        /* Contact Boxes */
-        .contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 50px 10%; }
-        .box { background: #161b22; padding: 30px; border-radius: 10px; text-align: center; }
-        .apply-btn { background: #ff9800; color: #000; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        .studio-header { background-color: #161b22; padding: 15px; border-radius: 10px; margin-bottom: 30px; border: 1px solid #30363d; display: inline-block; }
+
+        
+
+        /* Your Logo Fix (Added contrast so yellow shows) */
+
+        .logo { width: 150px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 0 5px rgba(255,255,255,0.3)); }
+
+        
+
+        /* Studio Name Text (Added so people know the name) */
+
+        .studio-name { font-size: 1.2em; color: #8b949e; font-weight: bold; text-transform: uppercase; margin-top: 5px; }
+
+
+
+        /* Game Card (Professional Card Style like Game District) */
+
+        .game-card { background: #161b22; border: 1px solid #30363d; border-radius: 20px; padding: 25px; display: inline-block; max-width: 650px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: 0.3s; }
+
+        .game-card:hover { transform: translateY(-5px); border-color: #ff9800; }
+
+
+
+        /* Icon Container (Centered over feature) */
+
+        .icon-wrap { width: 100px; height: 100px; margin: 0 auto; position: relative; top: 15px; z-index: 2; border-radius: 25px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.7); }
+
+        .icon { width: 100%; height: 100%; }
+
+
+
+        /* Feature Image (Contained in the card) */
+
+        .feature-wrap { position: relative; z-index: 1; margin-top: -50px; }
+
+        .feature-img { width: 100%; height: auto; border-radius: 15px; border: 2px solid #30363d; }
+
+
+
+        /* Game Title */
+
+        h1 { font-size: 1.8em; color: #ff9800; text-shadow: 0 0 10px rgba(255,152,0,0.5); margin: 15px 0 10px 0; }
+
+
+
+        /* Description (Refined and formatted in cards) */
+
+        .desc-box { text-align: left; background-color: #0d1117; padding: 15px; border-radius: 10px; border: 1px solid #30363d; margin: 15px 0; }
+
+        .desc- box p { color: #8b949e; line-height: 1.6; font-size: 0.95em; margin: 0 0 10px 0; }
+
+
+
+        /* Download Button */
+
+        .btn { display: inline-block; padding: 15px 40px; background: #ff9800; color: #000; font-weight: bold; text-decoration: none; border-radius: 40px; margin-top: 15px; transition: 0.3s; font-size: 1.1em; }
+
+        .btn:hover { background: #fff; color: #000; transform: scale(1.05); }
+
+
+
+        /* Footer */
+
+        footer { margin-top: 50px; }
+
+        .policy { color: #8b949e; text-decoration: none; font-size: 0.9em; transition: 0.3s; }
+
+        .policy:hover { color: #ff9800; }
+
     </style>
+
 </head>
+
 <body>
 
-    <nav>
-        <div style="font-weight:bold; font-size:24px; color:#ff9800;">GAMZARK STUDIO</div>
-        <div class="nav-links">
-            <a href="#home">Home</a><a href="#about">About</a><a href="#contact">Contact</a>
-        </div>
-    </nav>
 
-    <section id="home" class="game-section">
+
+    <div class="studio-header">
+
+        <img src="logo.png" class="logo" alt="Gamzark Studio Logo">
+
+        <div class="studio-name">Gamzark Studio</div>
+
+    </div>
+
+    
+
+    <div class="game-card">
+
+        
+
+        <div class="icon-wrap">
+
+            <img src="icon.png" class="icon" alt="Game Icon">
+
+        </div>
+
+
+
+        <div class="feature-wrap">
+
+            <img src="feature.png" class="feature-img" alt="Feature Graphic">
+
+        </div>
+
+        
+
         <h1>Pheri Wala Simulator</h1>
-        <p>Experience the ultimate door-to-door village trading.</p>
-        <div class="card-container">
-            <div class="card"><h3>Authentic Trading</h3><p>Manage your own cart in the village.</p></div>
-            <div class="card"><h3>Smart Deals</h3><p>Master the art of bargaining with locals.</p></div>
-            <div class="card"><h3>Expand Empire</h3><p>Grow your business from nothing.</p></div>
+
+        
+
+        <div class="desc-box">
+
+            <p><strong>Desi Life Sim:</strong> Experience authentic Pakistani/Indian village culture in this immersive simulator.</p>
+
+            <p><strong>Be a Vendor:</strong> Drive your customized cart, manage goods, and become the top street vendor.</p>
+
+            <p><strong>Open World:</strong> Explore detailed desi landscapes with realistic controls and fun missions.</p>
+
         </div>
-        <a href="#" class="apply-btn" style="display:inline-block; margin-top:30px;">Install Now</a>
-    </section>
 
-    <section id="about" style="padding: 50px 10%; background: #161b22;">
-        <h2>About Gamzark Studio</h2>
-        <p>We are a team of 25+ developers passionate about bringing desi culture to global gaming. Our vision is to build immersive worlds that tell stories.</p>
-    </section>
 
-    <section id="contact" class="contact-grid">
-        <div class="box"><h3>Idea/Project</h3><button class="apply-btn">Apply Now</button></div>
-        <div class="box"><h3>Work with Us</h3><button class="apply-btn">Apply Now</button></div>
-        <div class="box"><h3>General Query</h3><button class="apply-btn">Contact Us</button></div>
-    </section>
+
+        <a href="https://play.google.com/store/apps/details?id=com.GameZarkStudio.PheriWalaSimulator" class="btn">PLAY NOW</a>
+
+    </div>
+
+
+
+    <footer>
+
+        <a href="https://gamzarkstudio.blogspot.com/2026/01/privacy-policy.html" class="policy">Privacy Policy</a>
+
+    </footer>
+
+
 
 </body>
+
 </html>
